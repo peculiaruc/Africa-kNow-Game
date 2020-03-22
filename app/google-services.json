@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1095000234077",
+    "firebase_url": "https://africa-know-game.firebaseio.com",
+    "project_id": "africa-know-game",
+    "storage_bucket": "africa-know-game.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095000234077:android:1af941dd7c8e2dd42715b4",
+        "android_client_info": {
+          "package_name": "com.pecpacker.africaknow_game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095000234077-98ob2skqqbghvhp13lpbe0t3gs4hoa0a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pecpacker.africaknow_game",
+            "certificate_hash": "21916bbf07e786806c51b96617ce916acad2d420"
+          }
+        },
+        {
+          "client_id": "1095000234077-jskrshqabekcs5fqjs8lklftvgl5osrb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD70Oth2MXAIilecOHkxRiah0L0LVAT2uw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1095000234077-jskrshqabekcs5fqjs8lklftvgl5osrb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

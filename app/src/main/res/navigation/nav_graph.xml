@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signinFragment2">
+    <fragment
+        android:id="@+id/signinFragment2"
+        android:name="com.pecpacker.africaknowgame.SigninFragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_signinFragment2_to_signupFragment2"
+            app:destination="@id/signupFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment2"
+        android:name="com.pecpacker.africaknowgame.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment2_to_signinFragment2"
+            app:destination="@id/signinFragment2" />
+    </fragment>
+</navigation>

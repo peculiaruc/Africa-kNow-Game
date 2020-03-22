@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/txt_welcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:fontFamily="@font/salsa"
+        android:gravity="center"
+        android:text="Welcome to "
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_afriknow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/salsa"
+        android:gravity="center"
+        android:text="Afri Best Brains Game "
+        android:textSize="30dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcome" />
+
+    <EditText
+        android:id="@+id/useremail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#C9FFF5F5"
+        android:drawableStart="@drawable/email_id"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/salsa"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        style="@style/EditTextLayout"
+        tools:text="Email"
+        android:background="@drawable/ic_rectangle_7email_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_afriknow"
+        app:passwordToggleTint="#F8F8F8"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/primaryDarkColor"
+        android:fontFamily="@font/salsa"
+        android:text="Sign In"
+        app:cornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userpassword" />
+
+    <TextView
+        android:id="@+id/txt_signup"
+        android:layout_width="91dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="52dp"
+        android:text="@string/sign_up"
+        android:textColor="#000000"
+        android:fontFamily="@font/salsa"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_no_accout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_no_accout"
+        app:layout_constraintVertical_bias="0.914" />
+
+    <TextView
+        android:id="@+id/txt_no_accout"
+        android:layout_width="186dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="@font/salsa"
+        android:text="@string/don_t_have_account"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/txt_signup"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+
+    <EditText
+        android:id="@+id/userpassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#C9FFF5F5"
+        android:drawableStart="@drawable/action_lock"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Password"
+        style="@style/EditTextLayout"
+        android:background="@drawable/ic_rectangle_7email_background"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/useremail"
+        app:passwordToggleTint="#F8F8F8"
+        tools:text="Password" />
+</androidx.constraintlayout.widget.ConstraintLayout>

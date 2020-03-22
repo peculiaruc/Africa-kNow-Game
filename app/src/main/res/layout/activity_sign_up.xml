@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/txt_how_well"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/salsa"
+        android:gravity="center"
+        android:text="How Well Did You kNow AFRICA?"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_find_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/salsa"
+        android:gravity="center"
+        android:text="Register To Find Out"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_how_well" />
+
+    <EditText
+        android:id="@+id/txt_name"
+        style="@style/EditTextLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Name"
+        android:fontFamily="@font/salsa"
+        android:drawableStart="@drawable/action_user"
+        android:drawablePadding="16dp"
+        android:backgroundTint="#C9FFF5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_find_out"
+        app:passwordToggleTint="#F8F8F8"/>
+
+    <EditText
+        android:id="@+id/useremail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#FFFDFD"
+        android:hint="Email"
+        style="@style/EditTextLayout"
+        android:drawableStart="@drawable/email_id"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:fontFamily="@font/salsa"
+        android:background="@drawable/ic_rectangle_7email_background"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name"
+        app:passwordToggleTint="#F8F8F8"/>
+
+    <EditText
+        android:id="@+id/userpassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/ic_rectangle_7email_background"
+        android:backgroundTint="#C9FFF5F5"
+        android:drawableStart="@drawable/action_lock"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        style="@style/EditTextLayout"
+        android:fontFamily="@font/salsa"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/useremail"
+        app:passwordToggleTint="#F8F8F8" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#FFFDFD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userpassword"
+        app:passwordToggleTint="#F8F8F8">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#C9FFF5F5"
+            android:drawableStart="@drawable/call_black"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            style="@style/EditTextLayout"
+            android:fontFamily="@font/salsa"
+            android:hint="Phone Number"
+            android:inputType="text|number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_reg"
+        android:layout_width="159dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:text=" REGISTER"
+        android:fontFamily="@font/salsa"
+        app:cornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_number" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="208dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/salsa"
+        android:text="Aleady Have Account?"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reg" />
+
+    <TextView
+        android:id="@+id/txt_sign"
+        android:layout_width="128dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/salsa"
+        android:text="      Sign In"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
