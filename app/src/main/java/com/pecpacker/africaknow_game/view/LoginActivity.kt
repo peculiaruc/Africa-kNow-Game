@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        
         val btn_signin = findViewById<View>(R.id.btn_signin) as Button
 
         btn_signin.setOnClickListener(View.OnClickListener {
