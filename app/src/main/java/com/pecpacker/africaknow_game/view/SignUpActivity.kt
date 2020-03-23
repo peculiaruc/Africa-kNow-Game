@@ -1,4 +1,4 @@
-package com.pecpacker.africaknow_game
+package com.pecpacker.africaknow_game.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,12 +8,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_login.view.*
+import com.pecpacker.africaknow_game.R
 
 class SignUpActivity : AppCompatActivity() {
 

@@ -1,13 +1,20 @@
 
 package com.pecpacker.africaknow_game.Model;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.io.Serializable;
 import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+@Entity(tableName = "question_table")
 public class Question implements Serializable {
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
 
     private final static long serialVersionUID = -8642606268815438541L;
     @SerializedName("answers")

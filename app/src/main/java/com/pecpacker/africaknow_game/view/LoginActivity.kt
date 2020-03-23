@@ -1,4 +1,4 @@
-package com.pecpacker.africaknow_game
+package com.pecpacker.africaknow_game.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +11,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
+import com.pecpacker.africaknow_game.R
 
 class LoginActivity : AppCompatActivity() {
 
@@ -39,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
         if (!email.isEmpty() && !password.isEmpty()) {
             this.mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener ( this, OnCompleteListener<AuthResult> { task ->
                 if (task.isSuccessful) {
-                    startActivity(Intent(this, MainActivity::class.java))
+                    startActivity(Intent(this, GameActivity::class.java))
                     Toast.makeText(this, "Successfully Logged in :)", Toast.LENGTH_LONG).show()
                 } else {
                     Toast.makeText(this, "Error Logging in :(", Toast.LENGTH_SHORT).show()

@@ -1,10 +1,9 @@
-package com.pecpacker.africaknow_game
+package com.pecpacker.africaknow_game.view
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
+import com.pecpacker.africaknow_game.R
 
 
 class MainActivity : AppCompatActivity() {
