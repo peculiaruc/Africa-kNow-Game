@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.pecpacker.africaknow_game.API.GameService
 import com.pecpacker.africaknow_game.API.Gamesdata
+import com.pecpacker.africaknow_game.Answer
 import com.pecpacker.africaknow_game.Question
 import com.pecpacker.africaknow_game.QuestionData
 import com.pecpacker.africaknow_game.R
@@ -23,7 +24,8 @@ import retrofit2.Response
 class PlayGameFragment : Fragment() {
 
     private lateinit var questionData: QuestionData
-    private var questions: MutableList<Question>? = null
+    private lateinit var questions: MutableList<Question>
+    var questionIndex = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,21 +37,17 @@ class PlayGameFragment : Fragment() {
         val service = GameService.getRetrofitInstance()?.create(Gamesdata::class.java)
         val call: Call<QuestionData> = service!!.getAllQuestions()
         call.enqueue(object : Callback<QuestionData> {
+            var questionList = mutableListOf<Question>()
             override fun onResponse(call: Call<QuestionData>, response: Response<QuestionData>) {
                 if (response.isSuccessful) {
                     questionData = response.body()!!
 //                    Log.d("questionList", "response " + questionData.questions.toString())
-                    questions = mutableListOf()
+
                     for (question in questionData.questions) {
-                        questions?.add(question)
+                        questionList?.add(question)
 //                        Log.d("questionList", "response " + questions.toString())
                     }
-                    val questionList =
-                        questions?.asSequence()?.filter { it -> it.equals(Question::class.java) }
-
-                    for (t in questions!!)
-//
-                        questionTextView.text = t.question
+                    questions = questionList
                 }
 
             }
@@ -62,13 +60,26 @@ class PlayGameFragment : Fragment() {
         })
 
 
-//        if (questionList != null) {
-//            for( t in questionList)
-        //
-//                questionTextView.text = t
-//        }
+
 
         return root
+
+    }
+
+    private fun randomizeQuestion(){
+        questions.shuffle()
+        questionIndex = 0
+        setQuestion()
+
+    }
+
+    private fun setQuestion() {
+        val questionName = arrayListOf<String>()
+        val answer = arrayListOf<List<Answer>>()
+        val answerList = questions.filterIsInstance<List<Answer>>()
+
+        for (question in questions)
+            questionName.add(question.question)
 
     }
 
