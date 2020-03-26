@@ -3,23 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/signinFragment2">
+    app:startDestination="@id/playGameFragment">
     <fragment
-        android:id="@+id/signinFragment2"
-        android:name="com.pecpacker.africaknowgame.SigninFragment"
-        android:label="fragment_signin"
-        tools:layout="@layout/fragment_signin" >
+        android:id="@+id/logInFragment"
+        android:name="com.pecpacker.africaknow_game.ui.LogInFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_signinFragment2_to_signupFragment2"
-            app:destination="@id/signupFragment2" />
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_gameFragment2"
+            app:destination="@id/gameFragment2" />
     </fragment>
     <fragment
-        android:id="@+id/signupFragment2"
-        android:name="com.pecpacker.africaknowgame.SignupFragment"
-        android:label="fragment_signup"
-        tools:layout="@layout/fragment_signup" >
+        android:id="@+id/signUpFragment"
+        android:name="com.pecpacker.africaknow_game.ui.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up">
         <action
-            android:id="@+id/action_signupFragment2_to_signinFragment2"
-            app:destination="@id/signinFragment2" />
+            android:id="@+id/action_signUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/gameFragment2"
+        android:name="com.pecpacker.africaknow_game.ui.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment2_to_playGameFragment"
+            app:destination="@id/playGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playGameFragment"
+        android:name="com.pecpacker.africaknow_game.ui.PlayGameFragment"
+        android:label="fragment_play_game"
+        tools:layout="@layout/fragment_play_game" />
 </navigation>

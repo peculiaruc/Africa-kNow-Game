@@ -4,23 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.GameActivity">
+    tools:context=".ui.GameFragment">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_play"
         android:layout_width="175dp"
         android:layout_height="54dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginBottom="308dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="@color/primaryDarkColor"
         android:fontFamily="@font/salsa"
         android:text="PLAY Game"
         app:cornerRadius="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.312" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -32,19 +29,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/africa" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_log_out"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="24dp"
-        android:text="Log out"
-        app:cornerRadius="16dp"
-        android:backgroundTint="@color/primaryDarkColor"
-        android:fontFamily="@font/salsa"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_play"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_play"
-        app:layout_constraintTop_toTopOf="@+id/btn_play" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
