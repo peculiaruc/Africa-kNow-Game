@@ -20,6 +20,7 @@ class GameFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val root = inflater.inflate(R.layout.fragment_game, container, false)
+
         val playButton = root.findViewById<MaterialButton>(R.id.btn_play)
         playButton.setOnClickListener {
             Navigation.findNavController(playButton)

@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -23,8 +23,8 @@ class LogInFragment : Fragment() {
     lateinit var mDatabase: DatabaseReference
     var mAuth = FirebaseAuth.getInstance()
     var user = FirebaseAuth.getInstance().currentUser
-    private lateinit var useremail: EditText
-    private lateinit var userpassword: EditText
+    private lateinit var useremail: TextInputLayout
+    private lateinit var userpassword: TextInputLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -52,8 +52,8 @@ class LogInFragment : Fragment() {
 
     private fun sign() {
 
-        var email = useremail.text.toString()
-        var password = userpassword.text.toString()
+        var email = useremail.editText?.text.toString()
+        var password = userpassword.editText?.text.toString()
 
 
         if (!email.isEmpty() && !password.isEmpty()) {

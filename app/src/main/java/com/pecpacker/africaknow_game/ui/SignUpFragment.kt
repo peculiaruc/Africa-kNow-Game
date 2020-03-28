@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -23,9 +23,9 @@ class SignUpFragment : Fragment() {
 
     val mAuth = FirebaseAuth.getInstance()
     lateinit var mDatabase: DatabaseReference
-    lateinit var useremail: EditText
-    lateinit var userpassword: EditText
-    lateinit var username: EditText
+    lateinit var useremail: TextInputLayout
+    lateinit var userpassword: TextInputLayout
+    lateinit var username: TextInputLayout
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -57,9 +57,9 @@ class SignUpFragment : Fragment() {
     private fun registerUser() {
 
 
-        var email = useremail.text.toString()
-        var passsword = userpassword.text.toString()
-        var name = username.text.toString()
+        var email = useremail.editText?.text.toString()
+        var passsword = userpassword.editText?.text.toString()
+        var name = username.editText?.text.toString()
 
         if (!email.isEmpty() && !passsword.isEmpty() && !name.isEmpty()) {
             mAuth.createUserWithEmailAndPassword(email, passsword)
