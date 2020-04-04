@@ -26,12 +26,12 @@ class SignUpFragment : Fragment() {
     lateinit var useremail: TextInputLayout
     lateinit var userpassword: TextInputLayout
     lateinit var username: TextInputLayout
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_sign_up, container, false)
-
 
         val loginText = root.findViewById<TextView>(R.id.txt_sign)
         loginText.setOnClickListener {

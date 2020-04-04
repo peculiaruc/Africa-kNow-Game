@@ -6,6 +6,9 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
 apply plugin: 'kotlin-kapt'
 
 android {
+    dataBinding{
+        enabled true
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
 
@@ -63,6 +66,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0-alpha03'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.0-alpha03'
 
+    //material button
     implementation 'com.google.android.material:material:1.1.0'
 
     // RecyclerView
